@@ -11,6 +11,7 @@ services:
     working_dir: /var/www/backend
     volumes:
       - ./backend:/var/www/backend
+      - backend_vendor:/var/www/backend/vendor
       - backend_storage:/var/www/backend/storage
     environment:
       - APP_ENV=local
@@ -38,6 +39,7 @@ services:
     working_dir: /var/www/backend
     volumes:
       - ./backend:/var/www/backend
+      - backend_vendor:/var/www/backend/vendor
       - backend_storage:/var/www/backend/storage
     env_file:
       - ./backend/.env
@@ -103,6 +105,7 @@ services:
 volumes:
   postgres_data:
   redis_data:
+  backend_vendor:
   backend_storage:
   frontend_modules:
 

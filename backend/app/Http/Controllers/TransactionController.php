@@ -30,9 +30,25 @@ class TransactionController extends Controller
         ]);
 
         $perPage = (int) $request->get('per_page', 20);
-        $transactions = $this->transactionService->list($request->user()->id, $filters, $perPage);
+        $paginator = $this->transactionService->list($request->user()->id, $filters, $perPage);
 
-        return response()->json($transactions);
+        return response()->json([
+            'data'  => $paginator->items(),
+            'meta'  => [
+                'current_page' => $paginator->currentPage(),
+                'per_page'     => $paginator->perPage(),
+                'total'        => $paginator->total(),
+                'last_page'    => $paginator->lastPage(),
+                'from'         => $paginator->firstItem(),
+                'to'           => $paginator->lastItem(),
+            ],
+            'links' => [
+                'first' => $paginator->url(1),
+                'last'  => $paginator->url($paginator->lastPage()),
+                'prev'  => $paginator->previousPageUrl(),
+                'next'  => $paginator->nextPageUrl(),
+            ],
+        ]);
     }
 
     public function store(StoreTransactionRequest $request): JsonResponse
