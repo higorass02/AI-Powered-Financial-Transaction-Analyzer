@@ -1,0 +1,58 @@
+# Dependencies
+backend/vendor/
+frontend/node_modules/
+
+# Environment
+backend/.env
+backend/.env.backup
+.env
+
+# Build
+frontend/dist/
+frontend/build/
+
+# Laravel
+backend/bootstrap/cache/*.php
+backend/storage/logs/*.log
+backend/storage/framework/cache/data/
+backend/storage/framework/sessions/
+backend/storage/framework/testing/
+backend/storage/framework/views/
+backend/storage/app/public/
+
+# Database
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Composer
+backend/composer.lock
+
+# Node
+frontend/package-lock.json
+frontend/yarn.lock
+
+# Coverage
+backend/coverage/
+frontend/coverage/
+*.lcov
+
+# PHPUnit
+backend/.phpunit.cache/
+backend/.phpunit.result.cache
+
+# Docker
+.docker-secrets/
+
+# Misc
+*.log
+*.tmp
+*.bak
