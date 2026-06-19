@@ -36,7 +36,6 @@ class AnalyticsController extends Controller
     {
         $request->validate([
             'months' => ['nullable', 'integer', 'min:1', 'max:24'],
-            'include_forecast' => ['nullable', 'boolean'],
         ]);
 
         $months = (int) $request->get('months', 12);

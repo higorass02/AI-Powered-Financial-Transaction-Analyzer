@@ -114,7 +114,7 @@ Backend (Laravel 12)
 
 O backend segue **Service Layer + Repository Pattern**. A análise de IA é disparada de forma assíncrona via jobs enfileirados no Redis, evitando bloqueio nas requisições.
 
-Detalhes em [`Docs/Architecture/`](Docs/Architecture/).
+Detalhes em [`docs/architecture/`](docs/architecture/).
 
 ---
 
@@ -122,10 +122,10 @@ Detalhes em [`Docs/Architecture/`](Docs/Architecture/).
 
 ```
 ai-financial-analyzer/
-├── Docs/                    # Documentação completa
+├── docs/                    # Documentação completa
 │   ├── GETTING_STARTED.md   # Ponto de entrada da documentação
-│   ├── Architecture/        # Padrões, stack, API
-│   └── Business/            # Regras de negócio, roadmap, features
+│   ├── architecture/        # Padrões, stack, API
+│   └── business/            # Regras de negócio, roadmap, features
 ├── backend/                 # Laravel 12 (a implementar)
 ├── frontend/                # Vue 3 (a implementar)
 ├── .github/workflows/       # CI/CD (a implementar)
@@ -139,12 +139,12 @@ ai-financial-analyzer/
 
 | Documento | Conteúdo |
 |-----------|----------|
-| [`Docs/GETTING_STARTED.md`](Docs/GETTING_STARTED.md) | Guia completo de onboarding |
-| [`Docs/Architecture/API_ARCHITECTURE.md`](Docs/Architecture/API_ARCHITECTURE.md) | Endpoints e fluxos da API |
-| [`Docs/Architecture/DESIGN_PATTERNS.md`](Docs/Architecture/DESIGN_PATTERNS.md) | Padrões arquiteturais usados |
-| [`Docs/Architecture/TECHNOLOGY_STACK.md`](Docs/Architecture/TECHNOLOGY_STACK.md) | Stack completo com justificativas |
-| [`Docs/Business/BUSINESS_RULES.md`](Docs/Business/BUSINESS_RULES.md) | Regras de negócio |
-| [`Docs/Business/DEVELOPMENT_ROADMAP.md`](Docs/Business/DEVELOPMENT_ROADMAP.md) | Fases e timeline do projeto |
+| [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md) | Guia completo de onboarding |
+| [`docs/architecture/API_ARCHITECTURE.md`](docs/architecture/API_ARCHITECTURE.md) | Endpoints e fluxos da API |
+| [`docs/architecture/DESIGN_PATTERNS.md`](docs/architecture/DESIGN_PATTERNS.md) | Padrões arquiteturais usados |
+| [`docs/architecture/TECHNOLOGY_STACK.md`](docs/architecture/TECHNOLOGY_STACK.md) | Stack completo com justificativas |
+| [`docs/business/BUSINESS_RULES.md`](docs/business/BUSINESS_RULES.md) | Regras de negócio |
+| [`docs/business/DEVELOPMENT_ROADMAP.md`](docs/business/DEVELOPMENT_ROADMAP.md) | Fases e timeline do projeto |
 
 ---
 
